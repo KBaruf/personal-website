@@ -10,7 +10,7 @@ import Address from '../components/Address';
 import Map from '../components/Map';
 import HeaderMobile from '../components/header/HeaderMobile';
 
-const EdinaHome = () => {
+const Home = () => {
   const [isDark, setIsDark] = useState(true);
   // document.querySelector('body').classList.remove('rtl');
 
@@ -72,7 +72,6 @@ const EdinaHome = () => {
         <div className='container'>
           <div className='edina_tm_title'>
             <h3>Contact</h3>
-            <p></p>
           </div>
           <div className='extra_info'>
             <Address />
@@ -103,4 +102,4 @@ const EdinaHome = () => {
   );
 };
 
-export default EdinaHome;
+export default Home;
