@@ -4,7 +4,7 @@ import ReactTyped from 'react-typed';
 
 const heroContent = {
   shapeImage: 'hero-shape',
-  heroImage: '2',
+  heroImage: '5',
   name: 'Baruf Kosgei',
   description: `I'm a passionate Front-end Engineer who specialize in building (and occasionally designing) exceptional digital experiences. `,
 };
