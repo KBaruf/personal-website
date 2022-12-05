@@ -71,7 +71,7 @@ const Portfolio = () => {
           <li>
             <div className='list_inner'>
               <div className='image'>
-                <a href='https://mapty.vercel.app/' target='_blank' rel='noreferrer' className='details'>
+                <a href='https://mapty-kohl.vercel.app/' target='_blank' rel='noreferrer' className='details'>
                   <img src='img/portfolio/mapty.png' data-tip data-for='mapty' alt='portfolio' />
                   <ReactTooltip id='mapty' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
                     <div>
