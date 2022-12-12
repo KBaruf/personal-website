@@ -1091,7 +1091,7 @@ body.dark .loader_line:after {
     z-index: 1;
     border-radius: 50%;
     color: #fff;
-    background-color: #34495e;
+    // background-color: #34495e;
     img {
       filter: invert(1);
     }
@@ -1931,7 +1931,7 @@ body.modal {
   .icon {
     width: 55px;
     height: 55px;
-    background: #34495e;
+    // background: #34495e;
     border-radius: 50%;
     display: flex;
     align-items: center;
