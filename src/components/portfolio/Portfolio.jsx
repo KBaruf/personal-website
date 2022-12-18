@@ -50,7 +50,6 @@ const Portfolio = () => {
             </div>
           </li>
           {/* End li */}
-
           <li>
             <div className='list_inner'>
               <div className='image'>
@@ -67,7 +66,6 @@ const Portfolio = () => {
             </div>
           </li>
           {/* End li */}
-
           <li>
             <div className='list_inner'>
               <div className='image'>
@@ -84,24 +82,24 @@ const Portfolio = () => {
             </div>
           </li>
           {/* End li */}
-
-          {/* <li>
+          <li>
             <div className='list_inner'>
               <div className='image'>
-                <a href='https://www.youtube.com/channel/UC09n4DQMWRMURVw1ZlBoHKg/videos' target='_blank' rel='noreferrer' className='details'>
-                  <img src='img/portfolio/4.jpg' data-tip data-for='youtube' alt='portfolio' />
-                  <ReactTooltip id='youtube' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
+                <a href='https://www.barufkosgei.com' target='_blank' rel='noreferrer' className='details'>
+                  <img src='img/portfolio/applyandtrack.png' data-tip data-for='applyandtrack' alt='applyandtrack' />
+                  <ReactTooltip id='applyandtrack' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
                     <div>
-                      <h5>Youtube Shot</h5>
-                      <span>Youtube</span>
+                      <h5>Apply & Track</h5>
                     </div>
                   </ReactTooltip>
                 </a>
               </div>
+              <p>
+                Job tracking application build using React. Performs user authentication and displays stats of all jobs applied in area chart or bar chart. <strong>In the process of updating and improving its functionality</strong>{' '}
+              </p>
             </div>
-          </li> */}
+          </li>{' '}
           {/* End li */}
-
           {/* <li>
             <div className='list_inner'>
               <div className='image'>

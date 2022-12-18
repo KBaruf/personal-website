@@ -50,7 +50,7 @@ const About = () => {
               <div
                 className='main'
                 style={{
-                  backgroundImage: `url(${process.env.PUBLIC_URL + 'img/about/2.jpg'})`,
+                  backgroundImage: `url(${process.env.PUBLIC_URL + 'img/about/7.jpg'})`,
                 }}
                 data-aos='fade-left'
                 data-aos-duration='1200'
@@ -59,7 +59,7 @@ const About = () => {
 
               <div className='experience' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='300'>
                 <div className='info'>
-                  <h3>2+ Years</h3>
+                  <h3>3+ Years</h3>
                   <span>Of Experiance</span>
                 </div>
               </div>
