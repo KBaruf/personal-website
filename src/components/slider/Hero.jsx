@@ -6,7 +6,7 @@ const heroContent = {
   shapeImage: 'hero-shape',
   heroImage: '5',
   name: 'Baruf Kosgei',
-  description: `I'm a passionate Front-end Engineer who specialize in building (and occasionally designing) exceptional digital experiences. `,
+  description: `I'm a passionate Software Engineer who specialize in building exceptional digital experiences using MERN Stack (MongoDB, Express, React & Node.js). `,
 };
 
 const Hero = () => {
@@ -23,7 +23,7 @@ const Hero = () => {
           </h5>
           <h1 className='name' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='200'>
             <span className='typer-toper'>
-              <ReactTyped loop typeSpeed={150} backSpeed={60} strings={['Front-End Engineer', 'React Developer']} smartBackspace shuffle={false} backDelay={1} fadeOut={false} fadeOutDelay={100} loopCount={0} showCursor cursorChar='|' />
+              <ReactTyped loop typeSpeed={150} backSpeed={60} strings={['Software Engineer', 'Full-Stack Engineer']} smartBackspace shuffle={false} backDelay={1} fadeOut={false} fadeOutDelay={100} loopCount={0} showCursor cursorChar='|' />
             </span>
           </h1>
           <p className='text' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='300'>

@@ -2,11 +2,11 @@ import React from 'react';
 
 const skillsContent = [
   {
-    name: 'React.Js',
+    name: 'React.js',
     skillPercent: '95',
   },
   {
-    name: 'Next.Js',
+    name: 'Next.js',
     skillPercent: '90',
   },
   {
@@ -18,12 +18,20 @@ const skillsContent = [
     skillPercent: '95',
   },
   {
+    name: 'Node.js',
+    skillPercent: '90',
+  },
+  {
+    name: 'Express.js',
+    skillPercent: '95',
+  },
+  {
     name: 'MongoDB',
     skillPercent: '80',
   },
   {
-    name: 'WordPress',
-    skillPercent: '90',
+    name: 'Git & Github',
+    skillPercent: '85',
   },
 ];
 

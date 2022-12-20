@@ -85,7 +85,7 @@ const Portfolio = () => {
           <li>
             <div className='list_inner'>
               <div className='image'>
-                <a href='https://applyandtrack-n37y1a2mj-kbaruf.vercel.app/' target='_blank' rel='noreferrer' className='details'>
+                <a href='https://applyandtrack.vercel.app/' target='_blank' rel='noreferrer' className='details'>
                   <img src='img/portfolio/applyandtrack.png' data-tip data-for='applyandtrack' alt='applyandtrack' />
                   <ReactTooltip id='applyandtrack' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
                     <div>
