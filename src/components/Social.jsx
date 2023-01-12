@@ -11,10 +11,10 @@ const SocialShare = [
     iconName: <FiInstagram />,
     link: 'https://www.instagram.com/',
   },
-  { iconName: <FiGithub />, link: 'https://github.com/' },
+  { iconName: <FiGithub />, link: 'https://github.com/KBaruf' },
   {
     iconName: <FiLinkedin />,
-    link: 'https://www.linkedin.com/feed/',
+    link: 'https://www.linkedin.com/in/baruf-kosgei-09a543259/',
   },
 ];
 const Social = () => {

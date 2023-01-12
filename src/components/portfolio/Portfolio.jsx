@@ -69,6 +69,23 @@ const Portfolio = () => {
           <li>
             <div className='list_inner'>
               <div className='image'>
+                <a href='https://fitwork.netlify.app/' target='_blank' rel='noreferrer' className='details'>
+                  <img src='img/portfolio/fitwork.png' data-tip data-for='fitWork' alt='portfolio' />
+                  <ReactTooltip id='mapty' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
+                    <div>
+                      <h5>FitWork</h5>
+                    </div>
+                  </ReactTooltip>
+                </a>
+              </div>
+              <p>Fitness web application that fetches exercise data then searches, filters and display them based on targeted body parts. YouTube Videos, similar exercises, and exercises that uses the same equipments are also displayed.</p>
+            </div>
+          </li>
+          {/* End li */}
+          {/* End li */}
+          <li>
+            <div className='list_inner'>
+              <div className='image'>
                 <a href='https://mapty-kohl.vercel.app/' target='_blank' rel='noreferrer' className='details'>
                   <img src='img/portfolio/mapty.png' data-tip data-for='mapty' alt='portfolio' />
                   <ReactTooltip id='mapty' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
@@ -99,22 +116,6 @@ const Portfolio = () => {
               </p>
             </div>
           </li>{' '}
-          {/* End li */}
-          {/* <li>
-            <div className='list_inner'>
-              <div className='image'>
-                <a href='https://dribbble.com/shots/16529407-Deski-Saas-Software-React-Template' target='_blank' rel='noreferrer' className='details'>
-                  <img src='img/portfolio/5.jpg' data-tip data-for='web' alt='portfolio' />
-                  <ReactTooltip id='web' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
-                    <div>
-                      <h5>Web Apps Shot</h5>
-                      <span>Web Apps</span>
-                    </div>
-                  </ReactTooltip>
-                </a>
-              </div>
-            </div>
-          </li> */}
           {/* End li */}
         </Slider>
       </ul>
