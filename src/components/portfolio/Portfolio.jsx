@@ -36,11 +36,11 @@ const Portfolio = () => {
           <li>
             <div className='list_inner'>
               <div className='image'>
-                <a href='https://comfysloth.vercel.app/' target='_blank' rel='noreferrer' className='details'>
-                  <img src='img/portfolio/comfySloth.png' data-tip data-for='product' alt='portfolio' />
+                <a href='https://nairobi1.vercel.app/' target='_blank' rel='noreferrer' className='details'>
+                  <img src='img/portfolio/nairobi1.png' data-tip data-for='product' alt='nairobi' />
                   <ReactTooltip id='product' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
                     <div>
-                      <h5>ComfySloth</h5>
+                      <h5>NaiRobi</h5>
                       {/* <span>Product</span> */}
                     </div>
                   </ReactTooltip>
