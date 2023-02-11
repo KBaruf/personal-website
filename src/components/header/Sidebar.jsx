@@ -12,7 +12,7 @@ const sidebarContent = [
   { icon: 'human', itemName: 'About', itemRoute: '#about', activeClass: '' },
   {
     icon: 'portfolio',
-    itemName: 'Portfolio',
+    itemName: 'Projects',
     itemRoute: '#portfolio',
     activeClass: '',
   },

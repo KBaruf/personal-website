@@ -1,13 +1,13 @@
 import React from 'react';
 
 const educationContent = [
-  {
-    year: 'current',
-    // degree: "ENGINEERING DEGREE",
-    institute: 'UNIVERSITY OF WEST FLORIDA (online) ',
-    details: `Masters of Science in Computer Science
-`,
-  },
+  //   {
+  //     year: 'current',
+  //     // degree: "ENGINEERING DEGREE",
+  //     institute: 'UNIVERSITY OF WEST FLORIDA (online) ',
+  //     details: `Masters of Science in Computer Science
+  // `,
+  //   },
   {
     year: '2019 – 2021',
     // degree: 'MASTER DEGREE',

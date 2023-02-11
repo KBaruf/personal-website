@@ -59,8 +59,8 @@ const Home = () => {
       <div className='edina_tm_portfolio' id='portfolio'>
         <div className='container'>
           <div className='edina_tm_title'>
-            <h3>Portfolio</h3>
-            <p>Some of the projects I have recently worked on</p>
+            <h3>Projects</h3>
+            <p>To help learn and solidify my understanding of various technologies, I design and build variety of projects including the following:</p>
           </div>
           {/* End edian_tm_title */}
           <Portfolio />

@@ -70,8 +70,8 @@ const Portfolio = () => {
             <div className='list_inner'>
               <div className='image'>
                 <a href='https://fitwork.netlify.app/' target='_blank' rel='noreferrer' className='details'>
-                  <img src='img/portfolio/fitwork.png' data-tip data-for='fitWork' alt='portfolio' />
-                  <ReactTooltip id='mapty' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
+                  <img src='img/portfolio/fitwork.png' data-tip data-for='fitwork' alt='portfolio' />
+                  <ReactTooltip id='fitwork' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
                     <div>
                       <h5>FitWork</h5>
                     </div>
@@ -111,9 +111,7 @@ const Portfolio = () => {
                   </ReactTooltip>
                 </a>
               </div>
-              <p>
-                Job tracking application build using React. Performs user authentication and displays stats of all jobs applied in area chart or bar chart. <strong>In the process of updating and improving its functionality</strong>{' '}
-              </p>
+              <p>Job tracking application build using React. Performs user authentication and displays stats of all jobs applied in area chart or bar chart.</p>
             </div>
           </li>{' '}
           {/* End li */}

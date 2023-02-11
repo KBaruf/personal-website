@@ -9,13 +9,13 @@ const experienceContent = [
 HTML, Firebase, and Formspree.`,
   },
   {
-    year: 'Dec 2019 – May 2021',
+    year: 'Dec 2020 – May 2021',
     position: ' WordPress Developer',
     compnayName: 'Freelancer',
     details: `Worked with clients to generate and customize wordpress sites and implemented various upsell and security plugins.`,
   },
   {
-    year: 'Sep 2020 – Apr 2021',
+    year: 'Sep 2018 – Apr 2020',
     position: 'Marketing Technologist',
     companyName: 'Howard Johnson Hotel',
     details: `Implemented Customer Relationship Management tools and built marketing assests such as emails templates and landing pages.
