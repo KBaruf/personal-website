@@ -66,6 +66,23 @@ const Portfolio = () => {
             </div>
           </li>
           {/* End li */}
+          {/* End li */}
+          <li>
+            <div className='list_inner'>
+              <div className='image'>
+                <a href='https://sound-studio-kbaruf.vercel.app/' target='_blank' rel='noreferrer' className='details'>
+                  <img src='img/portfolio/soundstudio.png' data-tip data-for='soundstudio' alt='portfolio' />
+                  <ReactTooltip id='soundstudio' place='bottom' type='light' effect='float' className='tooltip-wrapper'>
+                    <div>
+                      <h5>Sound Studio</h5>
+                    </div>
+                  </ReactTooltip>
+                </a>
+              </div>
+              <p>An E-commerce web application coded in Typescript and uses Tailwind CSS for styling. It is integrated with the Sanity content management system and accepts payments through Stripe payment gateway.</p>
+            </div>
+          </li>
+          {/* End li */}
           <li>
             <div className='list_inner'>
               <div className='image'>
