@@ -3,6 +3,8 @@ import ReactTooltip from 'react-tooltip';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   var settings = {
@@ -34,6 +36,11 @@ const Portfolio = () => {
       <ul data-aos='fade-right' data-aos-duration='1200'>
         <Slider {...settings}>
           <li>
+            <Link to='https://github.com/KBaruf/NaiRobi' target='_blank' className='inspect' data-aos='fade-right' data-aos-duration='1200' data-aos-delay='400'>
+              {' '}
+              <FaSearch transform='scale(1.2)' color='white' fontSize='1.6em' /> Inspect Code
+            </Link>
+
             <div className='list_inner'>
               <div className='image'>
                 <a href='https://nairobi1.vercel.app/' target='_blank' rel='noreferrer' className='details'>
@@ -46,11 +53,15 @@ const Portfolio = () => {
                   </ReactTooltip>
                 </a>
               </div>
-              <p>Professional E-commerce Web application built with React and NextJS. Stores user data in MongoDB and performs Authentication using NextAuth. Integrated with Stripe payment gateway.</p>
+              <p className='list_inner-text'>Professional E-commerce Web application built with React and NextJS. Stores user data in MongoDB and performs Authentication using NextAuth. Integrated with Stripe payment gateway.</p>
             </div>
           </li>
           {/* End li */}
           <li>
+            <Link to='https://github.com/KBaruf/OmniFood' target='_blank' className='inspect' data-aos='fade-right' data-aos-duration='1200' data-aos-delay='400'>
+              {' '}
+              <FaSearch transform='scale(1.2)' color='white' fontSize='1.6em' /> Inspect Code
+            </Link>
             <div className='list_inner'>
               <div className='image'>
                 <a href='https://omni-food-smoky.vercel.app/' target='_blank' rel='noreferrer' className='details'>
@@ -62,12 +73,16 @@ const Portfolio = () => {
                   </ReactTooltip>
                 </a>
               </div>
-              <p>A creatively designed and highly responsive food delivery web application built with JavaScript-ES6, HTML, and CSS. Stores Data and Handles Authentication using Firebase.</p>
+              <p className='list_inner-text'>A creatively designed and highly responsive food delivery web application built with JavaScript-ES6, HTML, and CSS. Stores Data and Handles Authentication using Firebase.</p>
             </div>
           </li>
           {/* End li */}
           {/* End li */}
           <li>
+            <Link to='https://github.com/KBaruf/Sound-Studio-Client' target='_blank' className='inspect' data-aos='fade-right' data-aos-duration='1200' data-aos-delay='400'>
+              {' '}
+              <FaSearch transform='scale(1.2)' color='white' fontSize='1.6em' /> Inspect Code
+            </Link>
             <div className='list_inner'>
               <div className='image'>
                 <a href='https://sound-studio-kbaruf.vercel.app/' target='_blank' rel='noreferrer' className='details'>
@@ -79,11 +94,15 @@ const Portfolio = () => {
                   </ReactTooltip>
                 </a>
               </div>
-              <p>An E-commerce web application coded in Typescript and uses Tailwind CSS for styling. It is integrated with the Sanity content management system and accepts payments through Stripe payment gateway.</p>
+              <p className='list_inner-text'>An E-commerce web application coded in Typescript and uses Tailwind CSS for styling. It is integrated with the Sanity content management system and accepts payments through Stripe payment gateway.</p>
             </div>
           </li>
           {/* End li */}
           <li>
+            <Link to='https://github.com/KBaruf/fitwork' target='_blank' className='inspect' data-aos='fade-right' data-aos-duration='1200' data-aos-delay='400'>
+              {' '}
+              <FaSearch transform='scale(1.2)' color='white' fontSize='1.6em' /> Inspect Code
+            </Link>
             <div className='list_inner'>
               <div className='image'>
                 <a href='https://fitwork.netlify.app/' target='_blank' rel='noreferrer' className='details'>
@@ -95,12 +114,16 @@ const Portfolio = () => {
                   </ReactTooltip>
                 </a>
               </div>
-              <p>Fitness web application that fetches exercise data then searches, filters and display them based on targeted body parts. YouTube Videos, similar exercises, and exercises that uses the same equipments are also displayed.</p>
+              <p className='list_inner-text'>Fitness web application that fetches exercise data then searches, filters and display them based on targeted body parts. YouTube Videos, similar exercises, and exercises that uses the same equipments are also displayed.</p>
             </div>
           </li>
           {/* End li */}
           {/* End li */}
           <li>
+            <Link to='https://github.com/KBaruf/Mapty' target='_blank' className='inspect' data-aos='fade-right' data-aos-duration='1200' data-aos-delay='400'>
+              {' '}
+              <FaSearch transform='scale(1.2)' color='white' fontSize='1.6em' /> Inspect Code
+            </Link>
             <div className='list_inner'>
               <div className='image'>
                 <a href='https://mapty-kohl.vercel.app/' target='_blank' rel='noreferrer' className='details'>
@@ -112,11 +135,15 @@ const Portfolio = () => {
                   </ReactTooltip>
                 </a>
               </div>
-              <p>Workout application that uses openstreet API to display workout information and its location on the map. Has an option to display either running or cycling workout</p>
+              <p className='list_inner-text'>Workout application that uses openstreet API to display workout information and its location on the map. Has an option to display either running or cycling workout</p>
             </div>
           </li>
           {/* End li */}
           <li>
+            <Link to='https://github.com/KBaruf?tab=repositories' target='_blank' className='inspect' data-aos='fade-right' data-aos-duration='1200' data-aos-delay='400'>
+              {' '}
+              <FaSearch transform='scale(1.2)' color='white' fontSize='1.6em' /> Inspect Code
+            </Link>
             <div className='list_inner'>
               <div className='image'>
                 <a href='https://applyandtrack.vercel.app/' target='_blank' rel='noreferrer' className='details'>
@@ -128,7 +155,7 @@ const Portfolio = () => {
                   </ReactTooltip>
                 </a>
               </div>
-              <p>Job tracking application build using React. Performs user authentication and displays stats of all jobs applied in area chart or bar chart.</p>
+              <p className='list_inner-text'>Job tracking application build using React. Performs user authentication and displays stats of all jobs applied in area chart or bar chart.</p>
             </div>
           </li>{' '}
           {/* End li */}

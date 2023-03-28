@@ -1519,7 +1519,7 @@ body.dark .loader_line:after {
   height: auto;
   clear: both;
   float: left;
-  padding-top: 60px;
+  padding-top: 30px;
 }
 .my_carousel {
   width: 100%;
@@ -1542,6 +1542,19 @@ body.dark .loader_line:after {
   float: left;
   position: relative;
   cursor: pointer;
+}
+.inspect {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 10px;
+  &:hover {
+    color: white;
+  }
 }
 .my_carousel ul li .image {
   position: relative;
@@ -1586,6 +1599,9 @@ body.dark .loader_line:after {
 }
 .my_carousel ul li .list_inner:hover .image .main {
   transform: scale(1.1) translateZ(0);
+}
+.list_inner-text {
+  padding-top: 10px;
 }
 .my_carousel ul .details {
   width: 100%;
