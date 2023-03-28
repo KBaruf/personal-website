@@ -52,7 +52,7 @@ const About = () => {
               <div
                 className='main'
                 style={{
-                  backgroundImage: `url(${process.env.PUBLIC_URL + 'img/about/7.jpg'})`,
+                  backgroundImage: `url(${process.env.PUBLIC_URL + 'img/about/8.jpg'})`,
                 }}
                 data-aos='fade-left'
                 data-aos-duration='1200'
