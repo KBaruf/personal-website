@@ -2,24 +2,28 @@ import React from 'react';
 
 const experienceContent = [
   {
-    year: 'Jun 2021 – May 2022',
+    year: 'Mar. 2023 – Present',
+    position: ' Software/Forms Developer',
+    companyName: 'Texas Family Initiative',
+    details: `Design and maintain forms for Agency's enterprise fostercare application using C#, VB.Net, ASP.Net, Azure DevOps, SQL Server, and JavaScript/TypeScript.`,
+  },
+  {
+    year: 'Nov. 2021 – Mar. 2023',
+    position: ' Front-End Engineer',
+    companyName: 'Change Healthcare',
+    details: `Created a high-quality, responsive and user friendly web application using react.`,
+  },
+  {
+    year: 'Jun. 2019 – Sep. 2021',
     position: ' Front-End Engineer',
     companyName: 'Autobahn Limo',
-    details: `Developed and maintained a highly interactive ride-booking web application using Javascript-ES6, CSS, Sass,
-HTML, Firebase, and Formspree.`,
+    details: `Developed and maintained a highly interactive ride-booking web application using Javascript-ES6, CSS, Sass, HTML, Firebase, and Formspree.`,
   },
   {
-    year: 'Dec 2020 – May 2021',
+    year: 'Dec. 2018 – May. 2019',
     position: ' WordPress Developer',
-    compnayName: 'Freelancer',
-    details: `Worked with clients to generate and customize wordpress sites and implemented various upsell and security plugins.`,
-  },
-  {
-    year: 'Sep 2018 – Apr 2020',
-    position: 'Marketing Technologist',
-    companyName: 'Howard Johnson Hotel',
-    details: `Implemented Customer Relationship Management tools and built marketing assests such as emails templates and landing pages.
-`,
+    companyName: 'Upwork',
+    details: `Worked with clients to generate and optimize wordpress sites for Search Engine Optimization (SEO).`,
   },
 ];
 
