@@ -9,14 +9,12 @@ const educationContent = [
   // `,
   //   },
   {
-    year: '2019 – 2021',
     // degree: 'MASTER DEGREE',
     institute: 'UNIVERSITY OF ILLINOIS AT CHICAGO',
     details: `The Bachelor of Science in Integrated Health
 Studies`,
   },
   {
-    year: '2014 – 2016',
     // degree: 'BACHELOR DEGREE ',
     institute: 'LINCOLN COLLEGE',
     details: `Associate in Nursing
