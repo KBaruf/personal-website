@@ -1,7 +1,7 @@
 import React from 'react';
-import Social from '../../Social';
+import Social from '../components/Social';
 
-const ModalOne = ({ blogTitleHandler }) => {
+const BlogModal = ({ blogTitleHandler }) => {
   return (
     <div className='description_wrap scrollable'>
       <h1 className='news_title'>Overcoming Public Speaking Anxiety</h1>
@@ -34,6 +34,9 @@ const ModalOne = ({ blogTitleHandler }) => {
           </div>
           <p>Pretend everything is new and that you haven’t seen it before, and then you will be free to notice the leading lines, the places where one edge meets another in delightful geometric harmony, and how the ordinary things in the kitchen are transformed when the light is on or off.</p>
           <p>The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.</p>
+          <p>Pretend everything is new and that you haven’t seen it before, and then you will be free to notice the leading lines, the places where one edge meets another in delightful geometric harmony, and how the ordinary things in the kitchen are transformed when the light is on or off.</p>
+          <p>The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.</p>
+          <p>Pretend everything is new and that you haven’t seen it before, and then you will be free to notice the leading lines, the places where one edge meets another in delightful geometric harmony, and how the ordinary things in the kitchen are transformed when the light is on or off. The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.</p>
         </div>
         {/* End description */}
         <div className='news_share '>
@@ -46,4 +49,4 @@ const ModalOne = ({ blogTitleHandler }) => {
   );
 };
 
-export default ModalOne;
+export default BlogModal;

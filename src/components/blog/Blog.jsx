@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import ModalOne from './Modal/ModalOne';
+import BlogModal from '../../posts/BlogModal';
 
 Modal.setAppElement('#root');
 
@@ -103,7 +103,7 @@ const Blog = () => {
             {/* End close icon */}
 
             <div className='box_inner'>
-              <ModalOne />
+              <BlogModal />
             </div>
             {/* End box inner */}
           </div>
