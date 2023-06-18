@@ -5,6 +5,7 @@ import Sidebar from '../components/header/Sidebar';
 import Hero from '../components/slider/Hero';
 import About from '../components/about/About';
 import Portfolio from '../components/portfolio/Portfolio';
+import Blog from '../components/blog/Blog';
 import Contact from '../components/Contact';
 import Address from '../components/Address';
 import Map from '../components/Map';
@@ -67,6 +68,18 @@ const Home = () => {
         </div>
       </div>
       {/* End Portfolio */}
+
+      <div className='edina_tm_news' id='blog'>
+        <div className='container'>
+          <div className='edina_tm_title'>
+            <h3>Blog</h3>
+            <p>Welcome to this blog section where I will explore the fascinating world of emerging technologies, personal growth techniques, and entrepreneurial insights. The goal is to empower you on your journey to success, keeping you informed, inspired, and motivated.</p>
+          </div>
+          {/* End edian_tm_title */}
+          <Blog />
+        </div>
+      </div>
+      {/* End Blog */}
 
       <div className='edina_tm_contact' id='contact'>
         <div className='container'>

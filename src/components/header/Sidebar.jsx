@@ -16,6 +16,7 @@ const sidebarContent = [
     itemRoute: '#portfolio',
     activeClass: '',
   },
+  { icon: 'blog', itemName: 'Blog', itemRoute: '#blog', activeClass: '' },
   {
     icon: 'contact',
     itemName: 'Contact',
@@ -58,7 +59,7 @@ const Sidebar = () => {
           {/* End .logo */}
 
           <div className='menu'>
-            <ScrollspyNav scrollTargetIds={['home', 'about', 'portfolio', 'contact']} activeNavClass='active' offset={0} scrollDuration='100'>
+            <ScrollspyNav scrollTargetIds={['home', 'about', 'portfolio', 'blog', 'contact']} activeNavClass='active' offset={0} scrollDuration='100'>
               <ul className='anchor_nav'>
                 {sidebarContent.map((val, i) => (
                   <li key={i}>

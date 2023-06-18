@@ -1401,7 +1401,7 @@ body.dark .loader_line:after {
   height: 100%;
   float: left;
   overflow: hidden;
-  padding: 50px;
+  padding: 20px 40px;
   overflow-y: scroll;
 }
 .edina_tm_services .popup_informations {
@@ -1817,7 +1817,6 @@ body.dark .loader_line:after {
   font-weight: 700;
   transition: all 0.3s ease;
 }
-
 .edina_tm_modalbox .details {
   width: 100%;
   float: left;
@@ -1929,7 +1928,19 @@ body.modal {
   padding-left: 30px;
   color: #1a1a1a;
 }
-
+.news_title {
+  text-align: center;
+  padding: 4px;
+  @media (max-width: 1400px) {
+    font-size: 36px;
+  }
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
+  @media (max-width: 490px) {
+    font-size: 24px;
+  }
+}
 /*---------------------------------------------------*/
 /*	10)CONTACT
 /*---------------------------------------------------*/
