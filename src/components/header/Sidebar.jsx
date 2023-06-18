@@ -78,7 +78,7 @@ const Sidebar = () => {
             {/* <a href='img/cv.jpg' download className='color'>
               Resume
             </a> */}
-            <a href='/Baruf_Kosgei_Resume.pdf' target='_blank'>
+            <a href='/Baruf_Kosgei_Resume.pdf' target='_blank' rel='noreferrer'>
               Resume
             </a>
           </div>
