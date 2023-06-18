@@ -1,7 +1,7 @@
 import React from 'react';
 import Social from '../components/Social';
 
-const BlogModal = ({ blogTitleHandler }) => {
+const BlogModal = () => {
   return (
     <div className='description_wrap scrollable'>
       <h1 className='news_title'>Overcoming Public Speaking Anxiety</h1>
@@ -18,7 +18,7 @@ const BlogModal = ({ blogTitleHandler }) => {
 
       <div className='news_details'>
         <span>
-          April 07,2021 <a href='#'>Design</a>
+          April 07,2021 <a href='/'>Design</a>
         </span>
         <h3 className='title'>Forzo Immobile</h3>
       </div>

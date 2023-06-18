@@ -82,7 +82,7 @@ const Blog = () => {
 
                 <div className='news_details' onClick={() => toggleModal()}>
                   <span>
-                    April 07,2021 <a href='#'>Design</a>
+                    April 07,2021 <a href={blogTitle}>Design</a>
                   </span>
                   <h3 className='title'>Forzo Immobile</h3>
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry’s.</p>
