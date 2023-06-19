@@ -11,7 +11,7 @@
 }
 .custom-modal {
   position: fixed;
-  top: 53%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: none;
@@ -43,6 +43,7 @@
       width: 390px;
     }
     @media (max-width: 420px) {
+      top: 55%;
       width: 350px;
     }
   }
