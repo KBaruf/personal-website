@@ -82,7 +82,7 @@ const Blog = () => {
 
                 <div className='news_details'>
                   <span>
-                    April 07,2021 <a href='#'>Public Speaking</a>
+                    April 07,2021 <a href={blogTitle}>Public Speaking</a>
                   </span>
                   <h3 className='title' onClick={() => toggleModal()}>
                     Forzo Immobile
@@ -108,7 +108,7 @@ const Blog = () => {
 
                 <div className='news_details'>
                   <span>
-                    March 25,2021 <a href='#'>Branding</a>
+                    March 25,2021 <a href={blogTitle}>Branding</a>
                   </span>
                   <h3 className='title' onClick={() => toggleModal()}>
                     Mosby Lavette
@@ -135,7 +135,7 @@ const Blog = () => {
 
                 <div className='news_details'>
                   <span>
-                    May 01,2021 <a href='#'>Lifestyle</a>
+                    May 01,2021 <a href={blogTitle}>Lifestyle</a>
                   </span>
                   <h3 className='title' onClick={() => toggleModal()}>
                     Jacuba Bamba
@@ -162,7 +162,7 @@ const Blog = () => {
 
                 <div className='news_details'>
                   <span>
-                    July 07,2021 <a href='#'>Travel</a>
+                    July 07,2021 <a href={blogTitle}>Travel</a>
                   </span>
                   <h3 className='title' onClick={() => toggleModal()}>
                     Dostie Memorie
