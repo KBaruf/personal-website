@@ -38,35 +38,35 @@ const Blog = () => {
 
     window.history.pushState({ path: newSearch }, '', newSearch);
   }
-  // var settings = {
-  //   dots: false,
-  //   arrow: true,
-  //   infinite: true,
-  //   speed: 800,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   autoplay: false,
-  //   draggable: false,
-  //   responsive: [
-  //     {
-  //       breakpoint: 575,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         arrow: false,
-  //         autoplay: false,
-  //         speed: 300,
-  //         draggable: true,
-  //         dots: true,
-  //       },
-  //     },
-  //   ],
-  // };
+  var settings = {
+    dots: false,
+    arrow: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          arrow: false,
+          autoplay: false,
+          speed: 300,
+          draggable: true,
+          dots: true,
+        },
+      },
+    ],
+  };
 
   return (
     <>
       <div className='news_inner my_carousel'>
         <ul>
-          <Slider>
+          <Slider {...settings}>
             <li data-aos='fade-right' data-aos-duration='1200'>
               <div className='list_inner'>
                 <div className='image' onClick={() => toggleModal()}>
@@ -80,17 +80,98 @@ const Blog = () => {
                 </div>
                 {/* End image */}
 
-                <div className='news_details' onClick={() => toggleModal()}>
+                <div className='news_details'>
                   <span>
-                    April 07,2021 <a href={blogTitle}>Design</a>
+                    April 07,2021 <a href='#'>Public Speaking</a>
                   </span>
-                  <h3 className='title'>Forzo Immobile</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry’s.</p>
+                  <h3 className='title' onClick={() => toggleModal()}>
+                    Forzo Immobile
+                  </h3>
                 </div>
                 {/* End details */}
               </div>
             </li>
             {/* End single blog One */}
+
+            <li data-aos='fade-right' data-aos-duration='1200' data-aos-delay='150'>
+              <div className='list_inner'>
+                <div className='image' onClick={() => toggleModal()}>
+                  <img src='/img/placeholders/4-3.jpg' alt='thumb' />
+                  <div
+                    className='main'
+                    style={{
+                      backgroundImage: `url(${process.env.PUBLIC_URL + 'img/news/2.jpg'})`,
+                    }}
+                  ></div>
+                </div>
+                {/* End image */}
+
+                <div className='news_details'>
+                  <span>
+                    March 25,2021 <a href='#'>Branding</a>
+                  </span>
+                  <h3 className='title' onClick={() => toggleModal()}>
+                    Mosby Lavette
+                  </h3>
+                </div>
+                {/* End details */}
+              </div>
+              {/* End list inner */}
+            </li>
+            {/* End single blog Two */}
+
+            <li data-aos='fade-right' data-aos-duration='1200' data-aos-delay='300'>
+              <div className='list_inner'>
+                <div className='image' onClick={() => toggleModal()}>
+                  <img src='/img/placeholders/4-3.jpg' alt='thumb' />
+                  <div
+                    className='main'
+                    style={{
+                      backgroundImage: `url(${process.env.PUBLIC_URL + 'img/news/3.jpg'})`,
+                    }}
+                  ></div>
+                </div>
+                {/* END IMAGE */}
+
+                <div className='news_details'>
+                  <span>
+                    May 01,2021 <a href='#'>Lifestyle</a>
+                  </span>
+                  <h3 className='title' onClick={() => toggleModal()}>
+                    Jacuba Bamba
+                  </h3>
+                </div>
+                {/* End details */}
+              </div>
+              {/* END LIST INNER */}
+            </li>
+            {/* End single blog Three */}
+
+            <li data-aos='fade-right' data-aos-duration='1200' data-aos-dealy='400'>
+              <div className='list_inner'>
+                <div className='image' onClick={() => toggleModal()}>
+                  <img src='/img/placeholders/4-3.jpg' alt='thumb' />
+                  <div
+                    className='main'
+                    style={{
+                      backgroundImage: `url(${process.env.PUBLIC_URL + 'img/news/1.jpg'})`,
+                    }}
+                  ></div>
+                </div>
+                {/* End image */}
+
+                <div className='news_details'>
+                  <span>
+                    July 07,2021 <a href='#'>Travel</a>
+                  </span>
+                  <h3 className='title' onClick={() => toggleModal()}>
+                    Dostie Memorie
+                  </h3>
+                </div>
+                {/* End details */}
+              </div>
+            </li>
+            {/* End single blog Four */}
           </Slider>
         </ul>
 
