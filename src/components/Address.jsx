@@ -47,7 +47,7 @@ const Address = () => {
             <h3>Address</h3>
             <ul>
               <li>
-                <p>Fort Worth, Texas</p>
+                <p>Austin, Texas</p>
               </li>
             </ul>
           </div>
