@@ -16,7 +16,7 @@ const sidebarContent = [
     itemRoute: '#portfolio',
     activeClass: '',
   },
-  { icon: 'blog', itemName: 'Blog', itemRoute: '#blog', activeClass: '' },
+  // { icon: 'blog', itemName: 'Blog', itemRoute: '#blog', activeClass: '' },
   {
     icon: 'contact',
     itemName: 'Contact',
@@ -33,7 +33,7 @@ const sidebarFooterContent = {
   emailRef: 'mailto:barufkosgei@gmail.com',
 };
 
-const Sidebar = () => {
+const Sidebar = ({ isJobSearching }) => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   return (
@@ -78,9 +78,11 @@ const Sidebar = () => {
             {/* <a href='img/cv.jpg' download className='color'>
               Resume
             </a> */}
-            <a href='/Baruf_Kosgei_Resume.pdf' target='_blank' rel='noreferrer'>
-              Resume
-            </a>
+            {isJobSearching && (
+              <a href='/Baruf_Kosgei_Resume.pdf' target='_blank' rel='noreferrer'>
+                Resume
+              </a>
+            )}
           </div>
 
           {/* End .menu */}

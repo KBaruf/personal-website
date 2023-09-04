@@ -24,7 +24,7 @@ const About = () => {
               <h3>
                 Hello, my name is <span>Baruf Kosgei</span>
               </h3>
-              <p>My interest in software engineering started back in 2018 when I built my first e-commerce website. Since then I have built many amazing applications and learned alot in the process.</p>
+              <p>My journey began in 2018 when I built my first e-commerce website to sell shoes. Since then, I've been privileged to work with amazing teams and contributed to the development of numerous applications. I Currently work as a software developer at Emerson Automation Solutions, where I continue to grow in my role. </p>
             </div>
             <div className='my_skills'>
               <h3 className='title'>What is my skill level?</h3>

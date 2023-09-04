@@ -10,9 +10,13 @@ import Contact from '../components/Contact';
 import Address from '../components/Address';
 import Map from '../components/Map';
 import HeaderMobile from '../components/header/HeaderMobile';
+import Footer from '../components/footer/Footer';
 
 const Home = () => {
   const [isDark, setIsDark] = useState(true);
+  // change jobSearching state if job searching
+  const [isJobSearching, setisJobSearching] = useState(false);
+
   // document.querySelector('body').classList.remove('rtl');
 
   const handleLabelClick = () => {
@@ -50,9 +54,9 @@ const Home = () => {
         </div>
       </header>
 
-      <Sidebar />
+      <Sidebar isJobSearching={isJobSearching} />
       {/* End Header */}
-      <Hero />
+      <Hero isJobSearching={isJobSearching} />
       {/* End Hero */}
       <About />
       {/* End Hero */}
@@ -69,16 +73,17 @@ const Home = () => {
       </div>
       {/* End Portfolio */}
 
-      <div className='edina_tm_news' id='blog'>
+      {/* <div className='edina_tm_news' id='blog'>
         <div className='container'>
           <div className='edina_tm_title'>
             <h3>Blog</h3>
             <p>Welcome to this blog section where I will explore the fascinating world of emerging technologies, personal growth techniques, and entrepreneurial insights. The goal is to empower you on your journey to success, keeping you informed, inspired, and motivated.</p>
-          </div>
-          {/* End edian_tm_title */}
-          <Blog />
+          </div> */}
+      {/* End edian_tm_title */}
+      {/* <Blog />
         </div>
-      </div>
+      </div> */}
+
       {/* End Blog */}
 
       <div className='edina_tm_contact' id='contact'>
@@ -111,6 +116,10 @@ const Home = () => {
         </div>
       </div>
       {/* /CONTACT */}
+      {/* {FOOTER} */}
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

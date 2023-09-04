@@ -9,7 +9,7 @@ const heroContent = {
   description: `I am a passionate Full Stack Developer who is proficient in designing, developing, and deploying complex web applications that are secure, scalable, and efficient. As a problem solver and a technology enthusiast, I always stay up-to-date with the latest trends and technologies in the field. `,
 };
 
-const Hero = () => {
+const Hero = ({ isJobSearching }) => {
   return (
     //    HERO
     <div className='edina_tm_hero' id='home'>
@@ -34,9 +34,11 @@ const Hero = () => {
             <Social />
           </div>
           <div className='edina_tm_button' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='500'>
-            <a href='/Baruf_Kosgei_Resume.pdf' download className='color'>
-              Download Resume
-            </a>
+            {isJobSearching && (
+              <a href='/Baruf_Kosgei_Resume.pdf' download className='color'>
+                Download Resume
+              </a>
+            )}
           </div>
         </div>
       </div>
