@@ -59,7 +59,8 @@ const Sidebar = ({ isJobSearching }) => {
           {/* End .logo */}
 
           <div className='menu'>
-            <ScrollspyNav scrollTargetIds={['home', 'about', 'portfolio', 'blog', 'contact']} activeNavClass='active' offset={0} scrollDuration='100'>
+            {/* add 'blog' to scrollTargetIds array */}
+            <ScrollspyNav scrollTargetIds={['home', 'about', 'portfolio', 'contact']} activeNavClass='active' offset={0} scrollDuration='100'>
               <ul className='anchor_nav'>
                 {sidebarContent.map((val, i) => (
                   <li key={i}>
