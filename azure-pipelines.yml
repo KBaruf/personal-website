@@ -10,6 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: AzureLogin@1
+  inputs:
+    credentials: ${{ secrets.AZURE_CREDENTIALS }}
+    
 - task: NodeTool@0
   inputs:
     versionSpec: '19.x'
@@ -28,3 +32,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'personal-website'
     publishLocation: 'Container'
+- task: AzureAppServiceDeploy@1
+  inputs:
+    azureSubscriptionConnection: '$(AzureSubscriptionConnection)'
+    resourceGroupName: 'BarufKosgei_group'
+    appName: 'BarufKosgei'
+    packageFolder: '$(build.artifactstagingdirectory)'
+    publishRuntime: 'nodejs'
