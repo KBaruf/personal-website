@@ -52,66 +52,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 3px solid #fff;
 }
-/* Accessibility utilities */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-.skip_link {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -110%);
-  z-index: 1000;
-  background: #1473e6;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 12px 22px;
-  border-radius: 0 0 8px 8px;
-  transition: transform 0.2s ease;
-
-  &:focus {
-    transform: translate(-50%, 0);
-  }
-}
-
-/* Visible keyboard focus for every interactive element */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible,
-[tabindex]:focus-visible {
-  outline: 2px solid #1473e6;
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-/* Prevent background scrolling behind the open mobile menu */
-body.menu-is-open {
-  overflow: hidden;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 svg {
   width: 15px;
   height: 15px;
@@ -738,47 +678,11 @@ body.dark .loader_line:after {
 }
 
 .edina_tm_hero .text {
-  max-width: 560px;
-  margin: 0px auto 22px auto;
+  max-width: 500px;
+  margin: 0px auto 32px auto;
   @media screen and (max-width: 575px) {
     font-size: 15px;
   }
-}
-.edina_tm_hero .hero_meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  list-style: none;
-  margin: 0 auto 30px;
-  padding: 0;
-}
-.edina_tm_hero .hero_meta li {
-  position: relative;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #7e7e7e;
-  display: inline-flex;
-  align-items: center;
-
-  & + li::before {
-    content: '';
-    display: inline-block;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: rgba(20, 115, 230, 0.55);
-    margin-right: 18px;
-  }
-}
-.edina_tm_hero .hero_actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
 }
 .edina_tm_hero .social ul {
   margin: 0px;
@@ -842,10 +746,10 @@ body.dark .loader_line:after {
   height: auto;
   clear: both;
   float: left;
-  padding-bottom: 120px;
+  padding-bottom: 170px;
   padding-top: 120px;
   @media screen and (max-width: 991px) {
-    padding-bottom: 100px;
+    padding-bottom: 140px;
     padding-top: 90px;
   }
 }
@@ -884,19 +788,11 @@ body.dark .loader_line:after {
   width: 100%;
   height: auto;
   clear: both;
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: 80px;
-  align-items: start;
+  display: flex;
   padding-top: 60px;
-
-  @media screen and (max-width: 1040px) {
-    grid-template-columns: 1fr;
-    gap: 90px;
-  }
 }
 .edina_tm_about .leftpart {
-  width: 100%;
+  width: 50%;
 }
 .edina_tm_about .leftpart .info {
   width: 100%;
@@ -912,92 +808,112 @@ body.dark .loader_line:after {
   font-weight: 600;
 }
 .edina_tm_about .leftpart .info p {
-  max-width: 62ch;
+  max-width: 90%;
 }
 .edina_tm_about .my_skills {
   width: 100%;
-  clear: both;
-  padding-top: 90px;
-  border-top: 1px solid rgba(52, 73, 94, 0.1);
-  margin-top: 90px;
-
-  @media screen and (max-width: 1040px) {
-    padding-top: 60px;
-    margin-top: 60px;
-  }
+  float: left;
 }
 .edina_tm_about .my_skills .title {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 15px;
 }
-.edina_tm_about .desc {
-  max-width: 62ch;
-}
-
-/* Skill groups (replaces the old percentage bars) */
-.skills_groups {
+.edina_tm_about .dodo_progress {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 34px 40px;
-  padding-top: 34px;
-  margin-bottom: 40px;
-
-  @media screen and (max-width: 1200px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px 32px;
-  }
-  @media screen and (max-width: 575px) {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-}
-.skills_groups .group_label {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #7e7e7e;
-  margin-bottom: 12px;
-}
-.tag_list {
   display: flex;
+  padding-top: 40px;
   flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 -20px 10px;
+
+  @media screen and (max-width: 575px) {
+    margin: 0;
+  }
 }
-.tag_list li {
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #34495e;
-  background: rgba(20, 115, 230, 0.06);
-  border: 1px solid rgba(20, 115, 230, 0.18);
-  border-radius: 999px;
-  padding: 6px 13px;
-  transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+.edina_tm_about .desc {
+  max-width: 90%;
 }
-.skills_groups .tag_list li:hover {
-  border-color: rgba(20, 115, 230, 0.5);
-  background: rgba(20, 115, 230, 0.1);
-  color: #1473e6;
+.edina_tm_about .wrapper .progress_inner {
+  width: 50%;
+  padding: 0 20px;
+  @media screen and (max-width: 575px) {
+    width: 100%;
+    padding: 0;
+  }
+}
+.edina_tm_about .wrapper .right {
+  width: 50%;
+  padding-left: 20px;
+}
+.dodo_progress {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.progress_inner {
+  width: 100%;
+  margin-bottom: 31px;
+}
+.progress_inner .label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.progress_inner .background {
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+  height: 16px;
+  border: 1px solid #7e7e7e;
+  padding: 2px;
+}
+.progress_inner .background .bar_in {
+  height: 100%;
+  background: #34495e;
+
+  overflow: hidden;
+}
+.progress_inner .background .bar {
+  height: 100%;
+}
+.progress_inner .background .bar.open {
+  -webkit-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* Safari 4+ */
+  -moz-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* Fx 5+ */
+  animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* IE 10+ */
+  width: 100%;
+}
+
+@-webkit-keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .edina_tm_about .rightpart {
-  width: 100%;
-  /* leaves room for the offset "5+ Years" badge that overhangs the image */
-  padding-left: 60px;
-
-  @media screen and (max-width: 1040px) {
-    padding-left: 60px;
-    max-width: 520px;
-  }
-  @media screen and (max-width: 575px) {
-    padding-left: 0;
-  }
+  width: 50%;
+  padding-left: 200px;
 }
 .edina_tm_about .rightpart .image {
   position: relative;
@@ -1579,264 +1495,6 @@ body.dark .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	06b) EXPERIENCE
-/*---------------------------------------------------*/
-
-.edina_tm_experience {
-  width: 100%;
-  height: auto;
-  clear: both;
-  float: left;
-  padding: 120px 0;
-  background: #f8f9fb;
-
-  @media screen and (max-width: 991px) {
-    padding: 90px 0;
-  }
-}
-.edina_tm_experience .experience_inner {
-  /* .edina_tm_title is floated, so clear it before laying out the grid */
-  width: 100%;
-  clear: both;
-  display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
-  gap: 60px;
-  align-items: start;
-  padding-top: 46px;
-
-  @media screen and (max-width: 1040px) {
-    grid-template-columns: 1fr;
-    gap: 44px;
-  }
-}
-
-/* Timeline */
-.edina_tm_experience .timeline {
-  position: relative;
-  list-style: none;
-  margin: 0;
-  padding: 0 0 0 30px;
-
-  /* vertical rail */
-  &::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    bottom: 8px;
-    left: 5px;
-    width: 2px;
-    background: linear-gradient(to bottom, rgba(20, 115, 230, 0.45), rgba(20, 115, 230, 0.08));
-  }
-
-  @media screen and (max-width: 575px) {
-    padding-left: 22px;
-  }
-}
-.edina_tm_experience .timeline_item {
-  position: relative;
-  margin: 0 0 30px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-.edina_tm_experience .timeline_item .marker {
-  position: absolute;
-  top: 24px;
-  left: -30px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid rgba(20, 115, 230, 0.45);
-
-  @media screen and (max-width: 575px) {
-    left: -22px;
-  }
-}
-.edina_tm_experience .timeline_item:first-child .marker {
-  background: #1473e6;
-  border-color: #1473e6;
-  box-shadow: 0 0 0 4px rgba(20, 115, 230, 0.14);
-}
-.edina_tm_experience .timeline_card {
-  background: #fff;
-  border: 1px solid rgba(26, 26, 26, 0.08);
-  border-radius: 12px;
-  padding: 26px 28px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    border-color: rgba(20, 115, 230, 0.28);
-    box-shadow: 0 14px 34px rgba(26, 26, 26, 0.07);
-  }
-
-  @media screen and (max-width: 575px) {
-    padding: 22px 20px;
-  }
-}
-.edina_tm_experience .timeline_card .meta {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.edina_tm_experience .timeline_card .period {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #7e7e7e;
-}
-.edina_tm_experience .timeline_card .badge_current {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #1473e6;
-  background: rgba(20, 115, 230, 0.1);
-  border-radius: 999px;
-  padding: 3px 10px;
-}
-.edina_tm_experience .timeline_card .role {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.3;
-  color: #1a1a1a;
-  margin: 0 0 6px;
-}
-.edina_tm_experience .timeline_card .company {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 15px;
-  margin: 0 0 16px;
-}
-.edina_tm_experience .timeline_card .company_name {
-  font-weight: 500;
-  color: #34495e;
-}
-.edina_tm_experience .timeline_card .company .divider,
-.edina_tm_experience .timeline_card .location {
-  color: #7e7e7e;
-}
-.edina_tm_experience .timeline_card .highlights {
-  list-style: none;
-  margin: 0 0 16px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.edina_tm_experience .timeline_card .highlights li {
-  position: relative;
-  padding-left: 18px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #7e7e7e;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(20, 115, 230, 0.4);
-  }
-}
-
-/* Education + certifications */
-.edina_tm_experience .credentials {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  @media screen and (max-width: 1040px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    > * {
-      flex: 1 1 260px;
-    }
-  }
-}
-.edina_tm_experience .credential_block {
-  background: #fff;
-  border: 1px solid rgba(26, 26, 26, 0.08);
-  border-radius: 12px;
-  padding: 26px 28px;
-
-  @media screen and (max-width: 575px) {
-    padding: 22px 20px;
-  }
-}
-.edina_tm_experience .block_title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #7e7e7e;
-  margin: 0 0 18px;
-
-  svg {
-    width: 17px;
-    height: 17px;
-    color: #1473e6;
-  }
-}
-.edina_tm_experience .credential_list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.edina_tm_experience .credential_list > li + li {
-  border-top: 1px solid rgba(26, 26, 26, 0.07);
-  padding-top: 18px;
-}
-.edina_tm_experience .credential_list p {
-  margin: 0;
-}
-.edina_tm_experience .credential_list .primary {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #1a1a1a;
-}
-.edina_tm_experience .credential_list .secondary {
-  font-size: 15px;
-  color: #34495e;
-  margin-top: 3px;
-}
-.edina_tm_experience .credential_list .tertiary {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 14px;
-  color: #7e7e7e;
-  margin-top: 6px;
-}
-.edina_tm_experience .credential_list .cert_code {
-  font-weight: 600;
-  color: #1473e6;
-  background: rgba(20, 115, 230, 0.09);
-  border-radius: 5px;
-  padding: 2px 8px;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-}
-
-/*---------------------------------------------------*/
 /*	07) PORTFOLIO
 /*---------------------------------------------------*/
 
@@ -1854,140 +1512,6 @@ body.dark .loader_line:after {
   }
   .my_carousel ul li .image {
     height: auto;
-  }
-}
-
-/* Project grid (replaces the old 3-up carousel) */
-.portfolio_grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
-  list-style: none;
-  margin: 0;
-  padding: 40px 0 0;
-
-  @media screen and (max-width: 575px) {
-    grid-template-columns: 1fr;
-    gap: 26px;
-    padding-top: 30px;
-  }
-}
-.portfolio_grid > li {
-  display: flex;
-  margin: 0;
-}
-.project_card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(26, 26, 26, 0.08);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: rgba(20, 115, 230, 0.3);
-    box-shadow: 0 18px 40px rgba(26, 26, 26, 0.1);
-
-    .media img {
-      transform: scale(1.04);
-    }
-  }
-}
-.project_card .media {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: #f4f6f8;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.06);
-}
-.project_card .media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform 0.45s ease;
-}
-.project_card .body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  gap: 12px;
-  padding: 24px;
-
-  @media screen and (max-width: 575px) {
-    padding: 20px;
-  }
-}
-.project_card .title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin: 0;
-}
-.project_card .title a {
-  color: #1a1a1a;
-  text-decoration: none;
-  transition: color 0.25s ease;
-
-  &:hover {
-    color: #1473e6;
-  }
-}
-.project_card .desc {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #7e7e7e;
-  margin: 0;
-}
-.project_card .tag_list li {
-  font-size: 12px;
-  padding: 4px 10px;
-}
-.project_card .actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: auto;
-  padding-top: 6px;
-}
-.project_card .action {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  border-radius: 6px;
-  padding: 9px 16px;
-  border: 1px solid rgba(26, 26, 26, 0.15);
-  color: #1a1a1a;
-  transition: all 0.25s ease;
-
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  &:hover {
-    border-color: #1a1a1a;
-    background: #1a1a1a;
-    color: #fff;
-  }
-
-  &.primary {
-    border-color: #1473e6;
-    background: #1473e6;
-    color: #fff;
-
-    &:hover {
-      background: #0f5fc2;
-      border-color: #0f5fc2;
-    }
   }
 }
 .edina_tm_portfolio .portfolio_inner {
@@ -2639,53 +2163,6 @@ body.modal {
   background-color: #1a1a1a;
   border-color: #1a1a1a;
 }
-
-/* Hero call-to-action buttons */
-.edina_tm_hero .hero_actions a {
-  padding: 11px 26px;
-  font-size: 16px;
-}
-.edina_tm_hero .hero_actions a.color {
-  color: #fff;
-  background-color: #1473e6;
-  border-color: #1473e6;
-
-  &:hover {
-    background-color: #0f5fc2;
-    border-color: #0f5fc2;
-  }
-}
-.edina_tm_hero .hero_actions a.ghost:hover {
-  color: #fff;
-  background-color: #1a1a1a;
-  border-color: #1a1a1a;
-}
-
-/* Contact form submit + status message */
-.edina_tm_contact .edina_tm_button button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-.contact_form .form_status {
-  width: 100%;
-  float: left;
-  clear: both;
-  margin: 18px 0 0;
-  font-size: 15px;
-  line-height: 1.55;
-
-  &:empty {
-    margin: 0;
-  }
-
-  .is_success {
-    color: #1473e6;
-  }
-  .is_error {
-    color: #d64545;
-  }
-}
-
 .edina_tm_contact .right {
   width: 50%;
   margin-left: 30px;

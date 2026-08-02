@@ -102,6 +102,9 @@
 .theme-dark .edina_tm_sidebar .menu ul li .list_inner.current .svg.custom {
   stroke: #fff;
 }
+.theme-dark .progress_inner .label {
+  color: #fff;
+}
 .theme-dark .edina_tm_services {
   background-color: #191c26;
 }
@@ -154,6 +157,9 @@
   }
   .edina_tm_contact .right .google-map {
     border: 5px solid #000;
+  }
+  .progress_inner .background {
+    border: 1px solid #555;
   }
   .edina_tm_about .color:hover {
     background: transparent;
@@ -376,138 +382,4 @@ body.intro .loader_line:after {
 }
 .theme-dark .news_share ul li a {
   color: #eee;
-}
-
-/*---------------------------------------------------*/
-/*	DARK MODE — SKILLS, EXPERIENCE, PROJECTS
-/*---------------------------------------------------*/
-
-/* Skill / tech chips */
-.theme-dark .skills_groups .group_label {
-  color: #8b93a7;
-}
-.theme-dark .tag_list li {
-  color: #cfd5e3;
-  background: rgba(20, 115, 230, 0.12);
-  border-color: rgba(20, 115, 230, 0.3);
-}
-.theme-dark .skills_groups .tag_list li:hover {
-  border-color: rgba(20, 115, 230, 0.65);
-  background: rgba(20, 115, 230, 0.2);
-  color: #fff;
-}
-
-/* Experience section */
-.theme-dark .edina_tm_experience {
-  background-color: #191c26;
-}
-.theme-dark .edina_tm_experience .timeline::before {
-  background: linear-gradient(to bottom, rgba(20, 115, 230, 0.7), rgba(20, 115, 230, 0.12));
-}
-.theme-dark .edina_tm_experience .timeline_item .marker {
-  background: #191c26;
-  border-color: rgba(20, 115, 230, 0.6);
-}
-.theme-dark .edina_tm_experience .timeline_card,
-.theme-dark .edina_tm_experience .credential_block {
-  background-color: #111319;
-  border-color: #2a2f3d;
-}
-.theme-dark .edina_tm_experience .timeline_card:hover {
-  border-color: rgba(20, 115, 230, 0.5);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
-}
-.theme-dark .edina_tm_experience .timeline_card .period,
-.theme-dark .edina_tm_experience .timeline_card .location,
-.theme-dark .edina_tm_experience .timeline_card .company .divider,
-.theme-dark .edina_tm_experience .timeline_card .highlights li,
-.theme-dark .edina_tm_experience .block_title,
-.theme-dark .edina_tm_experience .credential_list .tertiary {
-  color: #a9afc3;
-}
-.theme-dark .edina_tm_experience .timeline_card .company_name,
-.theme-dark .edina_tm_experience .credential_list .secondary {
-  color: #cfd5e3;
-}
-.theme-dark .edina_tm_experience .timeline_card .badge_current {
-  color: #6cb0ff;
-  background: rgba(20, 115, 230, 0.2);
-}
-.theme-dark .edina_tm_experience .credential_list > li + li {
-  border-top-color: #2a2f3d;
-}
-.theme-dark .edina_tm_experience .credential_list .cert_code {
-  color: #6cb0ff;
-  background: rgba(20, 115, 230, 0.18);
-}
-
-/* Project cards */
-.theme-dark .project_card {
-  background-color: #111319;
-  border-color: #2a2f3d;
-}
-.theme-dark .project_card:hover {
-  border-color: rgba(20, 115, 230, 0.5);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
-}
-.theme-dark .project_card .media {
-  background: #0d1017;
-  border-bottom-color: #2a2f3d;
-}
-.theme-dark .project_card .title a {
-  color: #fff;
-
-  &:hover {
-    color: #6cb0ff;
-  }
-}
-.theme-dark .project_card .desc {
-  color: #a9afc3;
-}
-.theme-dark .project_card .action {
-  color: #cfd5e3;
-  border-color: #3a4152;
-
-  &:hover {
-    background: #fff;
-    border-color: #fff;
-    color: #111319;
-  }
-
-  &.primary {
-    background: #1473e6;
-    border-color: #1473e6;
-    color: #fff;
-
-    &:hover {
-      background: #3d8ef0;
-      border-color: #3d8ef0;
-      color: #fff;
-    }
-  }
-}
-
-/* Hero meta + contact status */
-.theme-dark .edina_tm_hero .hero_meta li {
-  color: #a9afc3;
-}
-.theme-dark .edina_tm_hero .hero_actions a.color {
-  border-color: #1473e6;
-  background-color: #1473e6;
-  color: #fff;
-
-  &:hover {
-    background-color: #3d8ef0;
-    border-color: #3d8ef0;
-    color: #fff;
-  }
-}
-.theme-dark .contact_form .form_status .is_success {
-  color: #6cb0ff;
-}
-.theme-dark .contact_form .form_status .is_error {
-  color: #ff8080;
-}
-.theme-dark .hello {
-  color: #a9afc3;
 }

@@ -1,51 +1,48 @@
 import React from 'react';
 import Social from '../Social';
-import { ReactTyped } from 'react-typed';
-import { profile } from '../../data/content';
+import ReactTyped from 'react-typed';
+
+const heroContent = {
+  shapeImage: 'hero-shape',
+  heroImage: '5',
+  name: 'Baruf Kosgei',
+  description: `I am a passionate Full Stack Developer who is proficient in designing, developing, and deploying complex web applications that are secure, scalable, and efficient. As a problem solver and a technology enthusiast, I always stay up-to-date with the latest trends and technologies in the field. `,
+};
 
 const Hero = ({ isJobSearching }) => {
   return (
     //    HERO
-    <section className='edina_tm_hero' id='home' aria-labelledby='hero-heading'>
+    <div className='edina_tm_hero' id='home'>
       <div className='content'>
-        <div className='img-shape' data-aos='fade-up' data-aos-duration='1000'>
-          <img src='img/hero/5.jpg' alt={`${profile.name}, ${profile.title}`} width='300' height='342' fetchpriority='high' decoding='async' />
+        <div className='img-shape' data-aos='fade-up' data-aos-duration='1200'>
+          <img src={`img/hero/${heroContent.shapeImage}`} srcSet={`img/hero/${heroContent.heroImage}.jpg`} alt='about author' />
         </div>
         <div className='extra'>
-          <h5 data-aos='fade-up' data-aos-duration='1000' data-aos-delay='100' className='hello'>
-            Hi, my name is <strong>{profile.name}</strong>
+          <h5 data-aos='fade-up' data-aos-duration='1200' data-aos-delay='100' className='hello'>
+            Hi, my name is <strong>{heroContent.name}</strong>
           </h5>
-          <h1 className='name' id='hero-heading' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='200'>
-            <span className='sr-only'>{`${profile.name} — ${profile.title}`}</span>
-            <span className='typer-toper' aria-hidden='true'>
-              <ReactTyped loop typeSpeed={90} backSpeed={45} strings={profile.roles} smartBackspace shuffle={false} backDelay={1600} fadeOut={false} fadeOutDelay={100} loopCount={0} showCursor cursorChar='|' />
+          <h1 className='name' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='200'>
+            <span className='typer-toper'>
+              <ReactTyped loop typeSpeed={150} backSpeed={60} strings={['Software Engineer', 'Full-Stack Developer']} smartBackspace shuffle={false} backDelay={1} fadeOut={false} fadeOutDelay={100} loopCount={0} showCursor cursorChar='|' />
             </span>
           </h1>
-          <p className='text' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='300'>
-            {profile.summary}
+          <p className='text' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='300'>
+            {heroContent.description}
           </p>
 
-          <ul className='hero_meta' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='350'>
-            <li>{profile.location}</li>
-            <li>Azure Certified — AZ-204 / AZ-900</li>
-          </ul>
-
-          <div className='social' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='400'>
+          <div className='social' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='400'>
             <Social />
           </div>
-          <div className='edina_tm_button hero_actions' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='500'>
-            <a href='#contact' className='color'>
-              Get in touch
-            </a>
+          <div className='edina_tm_button' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='500'>
             {isJobSearching && (
-              <a href={profile.resumeUrl} download className='ghost'>
+              <a href='/Baruf_Kosgei_Resume.pdf' download className='color'>
                 Download Resume
               </a>
             )}
           </div>
         </div>
       </div>
-    </section>
+    </div>
     // /HERO
   );
 };
