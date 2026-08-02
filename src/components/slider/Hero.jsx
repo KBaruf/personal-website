@@ -1,6 +1,6 @@
 import React from 'react';
 import Social from '../Social';
-import ReactTyped from 'react-typed';
+import { ReactTyped } from 'react-typed';
 import { profile } from '../../data/content';
 
 const Hero = ({ isJobSearching }) => {
