@@ -1,43 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Skills from '../skills/Skills';
-import Modal from 'react-modal';
-import ModalContent from './modal/ModalContent';
-
-Modal.setAppElement('#root');
+import { profile } from '../../data/content';
 
 const About = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  function toggleModalOne() {
-    setIsOpen(!isOpen);
-  }
-
   return (
-    //    ABOUT
-    <div className='edina_tm_about' id='about'>
+    <section className='edina_tm_about' id='about' aria-labelledby='about-heading'>
       <div className='container'>
         <div className='about_title'>
-          <h3>About Me</h3>
+          <h3 id='about-heading'>About Me</h3>
         </div>
         <div className='content'>
-          <div className='leftpart' data-aos='fade-right' data-aos-duration='1200' data-aos-delay='100'>
+          <div className='leftpart' data-aos='fade-right' data-aos-duration='1000' data-aos-delay='100'>
             <div className='info'>
               <h3>
-                Hello, my name is <span>Baruf Kosgei</span>
+                Hello, my name is <span>{profile.name}</span>
               </h3>
-              <p>My journey began in 2018 when I built my first e-commerce website to sell shoes. Since then, I've been privileged to work with amazing teams and contributed to the development of numerous applications. I Currently work as a software developer at Emerson Automation Solutions, where I continue to grow in my role. </p>
+              <p>{profile.about}</p>
+              <p>{profile.aboutSecondary}</p>
             </div>
             <div className='my_skills'>
-              <h3 className='title'>What is my skill level?</h3>
-              <p className='desc'>I'm continuously making an effort to improving what I already know and learn new technologies</p>
-              <div className='wrapper'>
-                <div className='dodo_progress'>
-                  <Skills />
-                </div>
-              </div>
+              <h3 className='title'>Technical skills</h3>
+              <p className='desc'>The tools and platforms I work with day to day.</p>
+              <Skills />
               <div className='edina_tm_button'>
-                <button type='submit' className='color' onClick={toggleModalOne}>
-                  See More
-                </button>
+                <a href='#experience' className='color'>
+                  View my experience
+                </a>
               </div>
             </div>
           </div>
@@ -45,22 +33,24 @@ const About = () => {
 
           <div className='rightpart'>
             <div className='image'>
-              <img src='img/thumbs/26-35.jpg' alt='thumb' />
+              <img src='img/thumbs/26-35.jpg' alt='' width='520' height='700' aria-hidden='true' />
 
               <div
                 className='main'
                 style={{
                   backgroundImage: `url(${process.env.PUBLIC_URL + 'img/about/8.jpg'})`,
                 }}
+                role='img'
+                aria-label={`Portrait of ${profile.name}`}
                 data-aos='fade-left'
-                data-aos-duration='1200'
+                data-aos-duration='1000'
                 data-aos-delay='200'
               ></div>
 
-              <div className='experience' data-aos='fade-up' data-aos-duration='1200' data-aos-delay='300'>
+              <div className='experience' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='300'>
                 <div className='info'>
-                  <h3>4+ Years</h3>
-                  <span>Of Experiance</span>
+                  <h3>{`${profile.yearsOfExperience} Years`}</h3>
+                  <span>Of Experience</span>
                 </div>
               </div>
             </div>
@@ -68,27 +58,7 @@ const About = () => {
           {/* End righttpart */}
         </div>
       </div>
-
-      {/* Start About Details Modal */}
-      <Modal isOpen={isOpen} onRequestClose={toggleModalOne} contentLabel='My dialog' className='custom-modal about-popup-wrapper' overlayClassName='custom-overlay ' closeTimeoutMS={500}>
-        <div className='edina_tm_modalbox'>
-          <button className='close-modal' onClick={toggleModalOne}>
-            <img src='/img/svg/cancel.svg' alt='close icon' />
-          </button>
-          {/* End close icon */}
-
-          <div className='box_inner'>
-            <div className='description_wrap scrollable'>
-              <ModalContent />
-            </div>
-          </div>
-          {/* End box inner */}
-        </div>
-        {/* End modal box news */}
-      </Modal>
-      {/* End  About Details Modal */}
-    </div>
-    // /ABOUT
+    </section>
   );
 };
 

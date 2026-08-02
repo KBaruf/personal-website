@@ -1,42 +1,44 @@
 import React from 'react';
-
-const educationContent = [
-  //   {
-  //     year: 'current',
-  //     // degree: "ENGINEERING DEGREE",
-  //     institute: 'UNIVERSITY OF WEST FLORIDA (online) ',
-  //     details: `Masters of Science in Computer Science
-  // `,
-  //   },
-  {
-    // degree: 'MASTER DEGREE',
-    institute: 'UNIVERSITY OF ILLINOIS AT CHICAGO',
-    details: `The Bachelor of Science in Integrated Health
-Studies`,
-  },
-  {
-    // degree: 'BACHELOR DEGREE ',
-    institute: 'LINCOLN COLLEGE',
-    details: `Associate in Nursing
-`,
-  },
-];
+import { FaGraduationCap, FaAward } from 'react-icons/fa';
+import { education, certifications } from '../../data/content';
 
 const Education = () => {
   return (
-    <ul>
-      {educationContent.map((val, i) => (
-        <li key={i}>
-          <div className='icon'>{/* <img src='img/about/book.png' alt='icon' /> */}</div>
-          <span className='time open-sans-font text-uppercase'>{val.year}</span>
-          <h5 className='poppins-font text-uppercase'>
-            {val.degree}
-            <span className='place open-sans-font'>{val.institute}</span>
-          </h5>
-          <p className='open-sans-font'>{val.details}</p>
-        </li>
-      ))}
-    </ul>
+    <div className='credentials'>
+      <div className='credential_block' data-aos='fade-up' data-aos-duration='800'>
+        <h4 className='block_title'>
+          <FaGraduationCap aria-hidden='true' focusable='false' />
+          Education
+        </h4>
+        <ul className='credential_list'>
+          {education.map((item) => (
+            <li key={item.institute}>
+              <p className='primary'>{item.degree}</p>
+              <p className='secondary'>{item.field}</p>
+              <p className='tertiary'>{item.institute}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className='credential_block' data-aos='fade-up' data-aos-duration='800' data-aos-delay='80'>
+        <h4 className='block_title'>
+          <FaAward aria-hidden='true' focusable='false' />
+          Certifications
+        </h4>
+        <ul className='credential_list'>
+          {certifications.map((item) => (
+            <li key={item.code}>
+              <p className='primary'>{item.name}</p>
+              <p className='tertiary'>
+                <span className='cert_code'>{item.code}</span>
+                <span className='cert_issuer'>Microsoft</span>
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 

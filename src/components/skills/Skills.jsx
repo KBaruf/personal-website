@@ -1,54 +1,20 @@
 import React from 'react';
-
-const skillsContent = [
-  {
-    name: 'React.js',
-    skillPercent: '95',
-  },
-  {
-    name: 'Next.js',
-    skillPercent: '90',
-  },
-  {
-    name: 'HTML',
-    skillPercent: '95',
-  },
-  {
-    name: 'CSS',
-    skillPercent: '95',
-  },
-  {
-    name: 'Node.js',
-    skillPercent: '90',
-  },
-  {
-    name: 'Express.js',
-    skillPercent: '95',
-  },
-  {
-    name: 'MongoDB',
-    skillPercent: '80',
-  },
-  {
-    name: 'Git & Github',
-    skillPercent: '85',
-  },
-];
+import { skillGroups } from '../../data/content';
 
 const Skills = () => {
   return (
-    <>
-      {skillsContent.map((val, i) => (
-        <div className='progress_inner' key={i}>
-          <span className='label'>{val.name}</span>
-          <div className='background'>
-            <div className='bar'>
-              <div className='bar_in' style={{ width: val.skillPercent + '%' }}></div>
-            </div>
-          </div>
+    <div className='skills_groups'>
+      {skillGroups.map((group, i) => (
+        <div className='skill_group' key={group.label} data-aos='fade-up' data-aos-duration='800' data-aos-delay={i * 60}>
+          <h4 className='group_label'>{group.label}</h4>
+          <ul className='tag_list'>
+            {group.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

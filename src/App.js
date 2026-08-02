@@ -6,7 +6,15 @@ import 'aos/dist/aos.css';
 
 const App = () => {
   useEffect(() => {
-    AOS.init();
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    AOS.init({
+      once: true,
+      duration: 700,
+      offset: 60,
+      easing: 'ease-out-cubic',
+      disable: prefersReducedMotion,
+    });
   }, []);
 
   return (

@@ -1,50 +1,41 @@
 import React from 'react';
-
-const experienceContent = [
-  {
-    year: 'Mar. 2023 – Present',
-    position: ' Software/Forms Developer',
-    companyName: 'Texas Family Initiative',
-    details: `Design and maintain forms for Agency's enterprise fostercare application using C#, VB.Net, ASP.Net, Azure DevOps, SQL Server, and JavaScript/TypeScript.`,
-  },
-  {
-    year: 'Nov. 2021 – Mar. 2023',
-    position: ' Front-End Engineer',
-    companyName: 'Change Healthcare',
-    details: `Created a high-quality, responsive and user friendly web application using react.`,
-  },
-  {
-    year: 'Jun. 2019 – Sep. 2021',
-    position: ' Front-End Engineer',
-    companyName: 'Autobahn Limo',
-    details: `Developed and maintained a highly interactive ride-booking web application using Javascript-ES6, CSS, Sass, HTML, Firebase, and Formspree.`,
-  },
-  {
-    year: 'Dec. 2018 – May. 2019',
-    position: ' WordPress Developer',
-    companyName: 'Upwork',
-    details: `Worked with clients to generate and optimize wordpress sites for Search Engine Optimization (SEO).`,
-  },
-];
+import { experience } from '../../data/content';
 
 const Experience = () => {
   return (
-    <ul>
-      {experienceContent.map((val, i) => (
-        <li key={i}>
-          {/* <div className='icon'>
-            <img src='img/about/briefcase.png' alt='icon' />
-            <i className='fa fa-briefcase'></i>
-          </div> */}
-          <span className='time open-sans-font text-uppercase'>{val.year}</span>
-          <h5 className='poppins-font text-uppercase'>
-            {val.position}
-            <span className='place open-sans-font'>{val.compnayName}</span>
-          </h5>
-          <p className='open-sans-font'>{val.details}</p>
+    <ol className='timeline'>
+      {experience.map((job, i) => (
+        <li className='timeline_item' key={`${job.company}-${job.start}`} data-aos='fade-up' data-aos-duration='800' data-aos-delay={Math.min(i * 80, 240)}>
+          <span className='marker' aria-hidden='true' />
+          <div className='timeline_card'>
+            <div className='meta'>
+              <span className='period'>{job.period}</span>
+              {job.current && <span className='badge_current'>Current</span>}
+            </div>
+            <h4 className='role'>{job.role}</h4>
+            <p className='company'>
+              <span className='company_name'>{job.company}</span>
+              <span className='divider' aria-hidden='true'>
+                •
+              </span>
+              <span className='location'>{job.location}</span>
+            </p>
+            <ul className='highlights'>
+              {job.highlights.map((point, j) => (
+                <li key={j}>{point}</li>
+              ))}
+            </ul>
+            {job.tags?.length > 0 && (
+              <ul className='tag_list'>
+                {job.tags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+            )}
+          </div>
         </li>
       ))}
-    </ul>
+    </ol>
   );
 };
 

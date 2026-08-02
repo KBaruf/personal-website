@@ -1,32 +1,28 @@
 import React from 'react';
-import { FiFacebook, FiTwitter, FiInstagram, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { socials } from '../data/content';
 
-const SocialShare = [
-  {
-    iconName: <FiFacebook />,
-    link: 'https://www.facebook.com/',
-  },
-  { iconName: <FiTwitter />, link: 'https://twitter.com/' },
-  {
-    iconName: <FiInstagram />,
-    link: 'https://www.instagram.com/',
-  },
-  { iconName: <FiGithub />, link: 'https://github.com/KBaruf' },
-  {
-    iconName: <FiLinkedin />,
-    link: 'https://www.linkedin.com/in/baruf-kosgei-09a543259/',
-  },
-];
+const icons = {
+  github: FiGithub,
+  linkedin: FiLinkedin,
+  mail: FiMail,
+};
+
 const Social = () => {
   return (
     <ul>
-      {SocialShare.map((val, i) => (
-        <li key={i}>
-          <a href={val.link} target='_blank' rel='noreferrer'>
-            {val.iconName}
-          </a>
-        </li>
-      ))}
+      {socials.map((item) => {
+        const Icon = icons[item.icon];
+        const isMail = item.icon === 'mail';
+
+        return (
+          <li key={item.name}>
+            <a href={item.link} aria-label={item.name} title={item.name} {...(isMail ? {} : { target: '_blank', rel: 'noreferrer' })}>
+              {Icon && <Icon aria-hidden='true' focusable='false' />}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 };

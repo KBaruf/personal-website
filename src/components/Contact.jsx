@@ -3,73 +3,101 @@ import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [result, setResult] = useState(false);
+  // 'idle' | 'sending' | 'success' | 'error'
+  const [status, setStatus] = useState('idle');
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const form = useRef();
-  const onSubmit = (data, e) => {
-    // console.log('Message submited: ' + JSON.stringify(data));
+
+  const onSubmit = () => {
+    setStatus('sending');
+
     emailjs.sendForm('service_dsrev1i', 'template_dyzx06f', form.current, '9fFlHOoF8BjGIWAc8').then(
-      (result) => {
-        if (result.text === 'OK') setResult(true);
-        console.log(result.text);
+      () => {
+        setStatus('success');
+        reset();
       },
-      (error) => {
-        console.log(error.text);
+      () => {
+        setStatus('error');
       }
     );
-    e.target.reset();
   };
 
+  const isSending = status === 'sending';
+
   return (
-    <>
-      <form ref={form} className='contact_form' onSubmit={handleSubmit(onSubmit)}>
-        <div className='first_row'>
-          <input type='text' name='name' placeholder='Name *' {...register('name', { required: true })} />
-          {errors.name && errors.name.type === 'required' && <span className='invalid-feedback'>Name is required</span>}
-        </div>
-        {/* End .first_row */}
+    <form ref={form} className='contact_form' onSubmit={handleSubmit(onSubmit)} noValidate>
+      <div className='first_row'>
+        <label className='sr-only' htmlFor='contact-name'>
+          Name
+        </label>
+        <input id='contact-name' type='text' name='name' placeholder='Name *' autoComplete='name' aria-invalid={errors.name ? 'true' : 'false'} aria-describedby={errors.name ? 'contact-name-error' : undefined} {...register('name', { required: 'Name is required' })} />
+        {errors.name && (
+          <span className='invalid-feedback' id='contact-name-error'>
+            {errors.name.message}
+          </span>
+        )}
+      </div>
+      {/* End .first_row */}
 
-        <div className='second'>
-          <input
-            type='email'
-            placeholder='Email *'
-            name='email'
-            {...register(
-              'email',
-              {
-                required: 'Email is Required',
-                pattern: {
-                  value: /\S+@\S+\.\S+/,
-                  message: 'Entered value does not match email format',
-                },
-              },
-              { required: true }
-            )}
-          />
-          {errors.email && <span className='invalid-feedback'>{errors.email.message}</span>}
-        </div>
-        {/* End .second */}
+      <div className='second'>
+        <label className='sr-only' htmlFor='contact-email'>
+          Email
+        </label>
+        <input
+          id='contact-email'
+          type='email'
+          placeholder='Email *'
+          name='email'
+          autoComplete='email'
+          aria-invalid={errors.email ? 'true' : 'false'}
+          aria-describedby={errors.email ? 'contact-email-error' : undefined}
+          {...register('email', {
+            required: 'Email is required',
+            pattern: {
+              value: /\S+@\S+\.\S+/,
+              message: 'Please enter a valid email address',
+            },
+          })}
+        />
+        {errors.email && (
+          <span className='invalid-feedback' id='contact-email-error'>
+            {errors.email.message}
+          </span>
+        )}
+      </div>
+      {/* End .second */}
 
-        <div className='third'>
-          <textarea {...register('message', { required: true })} placeholder='Message *' name='message'></textarea>
-          {errors.message && <span className='invalid-feedback'>Message is required</span>}
-        </div>
-        {/* End .third */}
+      <div className='third'>
+        <label className='sr-only' htmlFor='contact-message'>
+          Message
+        </label>
+        <textarea id='contact-message' placeholder='Message *' name='message' rows='6' aria-invalid={errors.message ? 'true' : 'false'} aria-describedby={errors.message ? 'contact-message-error' : undefined} {...register('message', { required: 'Message is required' })}></textarea>
+        {errors.message && (
+          <span className='invalid-feedback' id='contact-message-error'>
+            {errors.message.message}
+          </span>
+        )}
+      </div>
+      {/* End .third */}
 
-        <div className='edina_tm_button'>
-          <button type='submit' className='color' value='send'>
-            {`${result ? 'Message Sent Successfully' : 'Submit'}`}
-          </button>
-        </div>
-        {/* End tokyo_tm_button */}
-      </form>
-      {/* End contact */}
-    </>
+      <div className='edina_tm_button'>
+        <button type='submit' className='color' disabled={isSending}>
+          {isSending ? 'Sending…' : 'Send message'}
+        </button>
+      </div>
+      {/* End tokyo_tm_button */}
+
+      <p className='form_status' role='status' aria-live='polite'>
+        {status === 'success' && <span className='is_success'>Thanks — your message has been sent. I&apos;ll get back to you soon.</span>}
+        {status === 'error' && <span className='is_error'>Something went wrong sending your message. Please email me directly at barufkosgei@gmail.com.</span>}
+      </p>
+    </form>
   );
 };
 
