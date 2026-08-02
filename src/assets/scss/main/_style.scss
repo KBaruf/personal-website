@@ -842,10 +842,10 @@ body.dark .loader_line:after {
   height: auto;
   clear: both;
   float: left;
-  padding-bottom: 170px;
+  padding-bottom: 120px;
   padding-top: 120px;
   @media screen and (max-width: 991px) {
-    padding-bottom: 140px;
+    padding-bottom: 100px;
     padding-top: 90px;
   }
 }
@@ -884,11 +884,19 @@ body.dark .loader_line:after {
   width: 100%;
   height: auto;
   clear: both;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: start;
   padding-top: 60px;
+
+  @media screen and (max-width: 1040px) {
+    grid-template-columns: 1fr;
+    gap: 90px;
+  }
 }
 .edina_tm_about .leftpart {
-  width: 50%;
+  width: 100%;
 }
 .edina_tm_about .leftpart .info {
   width: 100%;
@@ -904,11 +912,19 @@ body.dark .loader_line:after {
   font-weight: 600;
 }
 .edina_tm_about .leftpart .info p {
-  max-width: 90%;
+  max-width: 62ch;
 }
 .edina_tm_about .my_skills {
   width: 100%;
-  float: left;
+  clear: both;
+  padding-top: 90px;
+  border-top: 1px solid rgba(52, 73, 94, 0.1);
+  margin-top: 90px;
+
+  @media screen and (max-width: 1040px) {
+    padding-top: 60px;
+    margin-top: 60px;
+  }
 }
 .edina_tm_about .my_skills .title {
   font-size: 22px;
@@ -916,20 +932,21 @@ body.dark .loader_line:after {
   margin-bottom: 15px;
 }
 .edina_tm_about .desc {
-  max-width: 90%;
+  max-width: 62ch;
 }
 
 /* Skill groups (replaces the old percentage bars) */
 .skills_groups {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px 32px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 34px 40px;
   padding-top: 34px;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
 
   @media screen and (max-width: 1200px) {
-    gap: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 32px;
   }
   @media screen and (max-width: 575px) {
     grid-template-columns: 1fr;
@@ -970,8 +987,17 @@ body.dark .loader_line:after {
 }
 
 .edina_tm_about .rightpart {
-  width: 50%;
-  padding-left: 200px;
+  width: 100%;
+  /* leaves room for the offset "5+ Years" badge that overhangs the image */
+  padding-left: 60px;
+
+  @media screen and (max-width: 1040px) {
+    padding-left: 60px;
+    max-width: 520px;
+  }
+  @media screen and (max-width: 575px) {
+    padding-left: 0;
+  }
 }
 .edina_tm_about .rightpart .image {
   position: relative;
@@ -1569,6 +1595,9 @@ body.dark .loader_line:after {
   }
 }
 .edina_tm_experience .experience_inner {
+  /* .edina_tm_title is floated, so clear it before laying out the grid */
+  width: 100%;
+  clear: both;
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
   gap: 60px;

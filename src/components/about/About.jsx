@@ -18,16 +18,6 @@ const About = () => {
               <p>{profile.about}</p>
               <p>{profile.aboutSecondary}</p>
             </div>
-            <div className='my_skills'>
-              <h3 className='title'>Technical skills</h3>
-              <p className='desc'>The tools and platforms I work with day to day.</p>
-              <Skills />
-              <div className='edina_tm_button'>
-                <a href='#experience' className='color'>
-                  View my experience
-                </a>
-              </div>
-            </div>
           </div>
           {/* End leftpart */}
 
@@ -56,6 +46,17 @@ const About = () => {
             </div>
           </div>
           {/* End righttpart */}
+        </div>
+
+        <div className='my_skills' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='100'>
+          <h3 className='title'>Technical skills</h3>
+          <p className='desc'>The tools and platforms I work with day to day.</p>
+          <Skills />
+          <div className='edina_tm_button'>
+            <a href='#experience' className='color'>
+              View my experience
+            </a>
+          </div>
         </div>
       </div>
     </section>
